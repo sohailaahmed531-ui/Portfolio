@@ -68,8 +68,11 @@
   align-items: center;
   text-align: center;
   padding: 100px 15%;
-  background: linear-gradient(135deg, #1D5B79, #468B97); /* خلفية غامقة */
+  background: linear-gradient(#f9f9f9); /* خلفية غامقة */
   color: white; /* النصوص الافتراضية */
+}
+body.dark .hero {
+  background-color: #000000; /* أسود */
 }
 
 .hero h1 {
@@ -112,6 +115,7 @@
       color: var(--text);
     }
     body.dark .skill { background: var(--bg-alt); border: 1px solid #333; }
+
 
 /* Services */
 .services {
@@ -217,10 +221,49 @@ section {
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
+/* Floating Contact Icons */
+.floating-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;   /* لو عايزة على الشمال غيريها لـ left: 20px; */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-icons a {
+  background: var(--primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.floating-icons a:hover {
+  background: var(--secondary);
+  transform: scale(1.1);
+}
+
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+<!-- Floating Contact Icons -->
+<div class="floating-icons">
+  <a href="tel:+201097239110" target="_blank"><i class="fas fa-phone"></i></a>
+  <a href="https://www.linkedin.com/in/sohaila-ahmed-a23214305" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/sohailaahmed531-ui" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="mailto:sohailaahmed531@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+
 <body>
 
   <!-- NAV -->
